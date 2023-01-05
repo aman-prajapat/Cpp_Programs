@@ -1,0 +1,1 @@
+cd "g:\App\MIngw\MinGW\bin\" ; if ($?) { g++ parenthesis.cpp -o parenthesis } ; if ($?) { .\parenthesis }
