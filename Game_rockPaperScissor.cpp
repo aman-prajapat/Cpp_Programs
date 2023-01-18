@@ -15,45 +15,27 @@ void game(int pc, int player, char name[])
     {
     case 1:
         if (pc == 1)
-        {
             cout << "Draw" << endl;
-        }
         else if (pc == 2)
-        {
             cout << "YOU LOSS" << endl;
-        }
         else
-        {
             cout << name << " win!!!" << endl;
-        }
         break;
     case 2:
         if (pc == 2)
-        {
             cout << "Draw" << endl;
-        }
         else if (pc == 3)
-        {
             cout << "YOU LOSS" << endl;
-        }
         else
-        {
             cout << name << " win!!!" << endl;
-        }
         break;
     case 3:
         if (pc == 3)
-        {
             cout << "Draw" << endl;
-        }
         else if (pc == 1)
-        {
             cout << "YOU LOSS" << endl;
-        }
         else
-        {
             cout << name << " win!!!" << endl;
-        }
         break;
     }
 }

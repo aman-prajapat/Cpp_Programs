@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 #define MAX 10
+#include <iomanip>
 class Book
 {
 
@@ -10,16 +11,21 @@ class Book
     string author;
     int pages;
     friend int search(int, Book[], int);
-    friend void ShowBooks(Book*, int);
+    friend void ShowBooks(Book[], int);
 
 public:
     void entry()
     {
+        cin.clear();
+        cin.ignore(1000,'\n');
 
         cout << "Enter Name of the book : ";
-        cin >> name;
+        getline(cin,name);
+        
         cout << "\nEnter Author Name of the book : ";
         cin >> author;
+        cin.clear();
+        cin.ignore(1000,'\n');
         cout << "\nEnter ID of the book : ";
         cin >> id;
         cout << "\nEnter Pages of the book : ";
@@ -71,11 +77,12 @@ int search(int idD, Book obj[], int count)
 
 void ShowBooks(Book obj[], int count)
 {
-    cout << "Name\t\tID" << endl;
+    cout << "\n**************************************************" << endl;
+    cout<<"Name\t\t\t\t" << "ID" << endl;
     int i = 0;
     while (i != count)
     {
-        cout << obj[i].name << "\t\t" << obj[i].id << endl;
+        cout << obj[i].name << "\t\t\t" <<obj[i].id << endl;
         i++;
     }
 }
