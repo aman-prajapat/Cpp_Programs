@@ -80,9 +80,7 @@ label:
     cout << "----------------------------------------------" << endl;
     cout << "         -------BIRTHDAY LIST---------" << endl;
     cout << "----------------------------------------------" << endl;
-    cout << "Enter 1 for more friends entry: \nEnter 2 to show all data: 
-     \nEnter 3 to get Birthday list accourding to Months :
-     \nEnter 4 for exit" << endl;
+    cout << "Enter 1 for more friends entry: \nEnter 2 to show all data: \nEnter 3 to get Birthday list accourding to Months :\nEnter 4 for exit" << endl;
     cout << "----------------------------------------------" << endl;
     cin >> choice;
 
@@ -113,11 +111,14 @@ label:
 
         instant->DisplayByMonth(choice);
     }
-    else
+    else if(choice == 4)
     {
         cout << "Your Data hass been recorded and saved \n";
-        abrot();
+        abort();
     }
+    else
+    cout<<"Enter a vaild selection"<<endl;
+
     goto label;
 
     return 0;
