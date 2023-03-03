@@ -13,17 +13,17 @@ public:
     Birthday()
     {
         cin.clear();
-        cin.ignore(1000, '\n');
+        cin.ignore(1000, '\n'); // used to get mutiple words as inpute 
         cout << "Enter Name of Family member or Friend: \n";
         getline(cin, name);
 
         cout << "Enter Date of birth of that person (Formate = -date- -month- -year-): \n";
         cin >> date >> month >> year;
     }
-    void assign(Birthday *temp);
-    void display();
-    void DisplayByMonth(int);
-    void save();
+    void assign(Birthday *temp); //this is use to assing addres of next node to previous node
+    void display(); // this funtion show all birthday entries
+    void DisplayByMonth(int); //this funtion display all birthday in a selected month
+    void save(); //this funtion will save all entries in a file
 };
 
 void Birthday ::save(){
@@ -61,7 +61,7 @@ void Birthday::DisplayByMonth(int months)
         }
         if (temp->month == months)
         {
-            cout << setw(20)<<temp->name;
+            cout << setw(20)<<temp->name; // setw is use to create table template
             cout << setw(10)<<temp->date << "/" << temp->month << "/" << temp->year << "\n";
             counter++;
         }
