@@ -23,13 +23,13 @@ public:
     void assign(Birthday *temp); //this is use to assing addres of next node to previous node
     void display(); // this funtion show all birthday entries
     void DisplayByMonth(int); //this funtion display all birthday in a selected month
-    void save(); //this funtion will save all entries in a file
+    void save(); //this funtion will save all entries in a file with append mode
 };
 
 void Birthday ::save(){
     ofstream fout;
 
-    fout.open("Birthday.txt");
+    fout.open("Birthday.txt",ios::app);
     Birthday *temp = this;
     fout << "List of all DOB entries" << endl;
         fout<<setw(15)<<"Name"<<setw(18)<<"DOB"<<endl;
