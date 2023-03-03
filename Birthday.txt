@@ -1,0 +1,5 @@
+List of all DOB entries
+           Name               DOB
+                amna        10/20/66
+        akids dhjhsd        15/75/2365
+***********************************************************

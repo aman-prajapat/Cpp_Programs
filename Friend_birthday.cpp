@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 #include <iomanip>
+#include <fstream>
+
 class Birthday
 {
     string name;
@@ -21,8 +23,25 @@ public:
     void assign(Birthday *temp);
     void display();
     void DisplayByMonth(int);
+    void save();
 };
 
+void Birthday ::save(){
+    ofstream fout;
+
+    fout.open("Birthday.txt");
+    Birthday *temp = this;
+    fout << "List of all DOB entries" << endl;
+        fout<<setw(15)<<"Name"<<setw(18)<<"DOB"<<endl;
+    do
+    {
+        fout << setw(20)<<temp->name;
+        fout << setw(10)<<temp->date << "/" << temp->month << "/" << temp->year << "\n";
+        temp = temp->next;
+    } while (temp != NULL);
+    fout<<"***********************************************************\n";
+
+}
 void Birthday::assign(Birthday *temp)
 {
     next = temp;
@@ -113,6 +132,7 @@ label:
     }
     else if(choice == 4)
     {
+        instant->save();
         cout << "Your Data hass been recorded and saved \n";
         abort();
     }
