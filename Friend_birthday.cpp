@@ -31,8 +31,6 @@ void Birthday ::save(){
 
     fout.open("Birthday.txt",ios::app);
     Birthday *temp = this;
-    fout << "List of all DOB entries" << endl;
-        fout<<setw(15)<<"Name"<<setw(18)<<"DOB"<<endl;
     do
     {
         fout << setw(20)<<temp->name;
@@ -106,7 +104,7 @@ label:
     if (choice == 1)
     {
         if (total_entries == 0)
-        {
+        {            
             instant = new Birthday;
             last = instant;
             total_entries++;
